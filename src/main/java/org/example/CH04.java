@@ -42,7 +42,7 @@ public class CH04 {
     public void kiminonawa() {
         var msg = "君の名は？";
         var userInput = new Scanner(System.in);
-        System.out.println("我的名字是: " + userInput.nextLine());
+        System.out.println(msg + "我的名字是: " + userInput.nextLine());
     }
 
     @Test
