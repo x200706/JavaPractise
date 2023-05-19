@@ -2,9 +2,9 @@ package org.example;
 
 import org.junit.jupiter.api.Test;
 
-public class CH05 {
-    @Test
-    public void mouseWalkTheMaze() {
+public class Mouse {
+
+    public static void main(String[] args) {
         int[][] maze = { //勞贖會從(1,0)走到(6,5) 老鼠會轉彎
                 {2, 2, 2, 2, 2, 2, 2},
                 {0, 0, 0, 0, 0, 0, 2},
@@ -16,7 +16,7 @@ public class CH05 {
         };
         //print出路徑，道路是空字串，牆壁是█，勞贖是◇
         for (int i = 0; i < maze.length; i++) {
-            for (int j = 0; j < maze.length; j++) {
+            for (int j = 0; j < maze[0].length; j++) {
                 if (maze[i][j] == 2 && j != 6) {
                     System.out.print("█");
                 } else if (maze[i][j] == 2 && j == 6) {
