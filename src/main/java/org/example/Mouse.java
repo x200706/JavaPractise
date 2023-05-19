@@ -1,20 +1,18 @@
 package org.example;
 
-import org.junit.jupiter.api.Test;
-
 public class Mouse {
+    static int[][] maze = {//勞贖會從(1,0)走到(6,5)
+            {2, 2, 2, 2, 2, 2, 2},
+            {0, 0, 0, 0, 0, 0, 2},
+            {2, 0, 2, 0, 2, 0, 2},
+            {2, 0, 0, 2, 0, 2, 2},
+            {2, 2, 0, 2, 0, 2, 2},
+            {2, 0, 0, 0, 0, 0, 2},
+            {2, 2, 2, 2, 2, 0, 2},
+    };
 
     public static void main(String[] args) {
-        int[][] maze = { //勞贖會從(1,0)走到(6,5) 老鼠會轉彎
-                {2, 2, 2, 2, 2, 2, 2},
-                {0, 0, 0, 0, 0, 0, 2},
-                {2, 0, 2, 0, 2, 0, 2},
-                {2, 0, 0, 2, 0, 2, 2},
-                {2, 2, 0, 2, 0, 2, 2},
-                {2, 0, 0, 0, 0, 0, 2},
-                {2, 2, 2, 2, 2, 0, 2},
-        };
-        //讓老鼠走迷宮，經過的可行路線值改為1
+        mouseGo(1,0);
 
         //print出路徑，道路是空字串，牆壁是█，勞贖是◇
         for (int i = 0; i < maze.length; i++) {
@@ -34,7 +32,8 @@ public class Mouse {
             }
         }
     }
-    public boolean mouseGo(){
+
+    public static boolean mouseGo(int i, int j) {//讓老鼠走迷宮，經過的可行路線值改為1
         return false;
     }
 }
