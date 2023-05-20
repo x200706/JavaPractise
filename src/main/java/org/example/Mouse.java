@@ -14,7 +14,7 @@ public class Mouse {
 
 
     public static void main(String[] args) {
-        if (mouseGo(1, 0)) {//傳入本題勞贖的起點
+        if (!mouseGo(1, 0)) {//傳入本題勞贖的起點
             System.out.println("此迷宮無解");
         } else {
             //print出路徑，道路是空字串，牆壁是█，勞贖是◇
