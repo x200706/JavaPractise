@@ -46,7 +46,7 @@ public class Mouse {
         //勞贖開始探索四個方位如果迷宮還沒走完，而且勞贖發現右邊為0即為有路
         if (!flag && j + 1 < maze[0].length && maze[i][j + 1] == 0) {
             //繼續走迷宮（遞迴）
-            mouseGo(i, j + 1);//老鼠往右移一格
+            mouseGo(i, j + 1);//勞贖往右移一格
         }
         if (!flag && i + 1 < maze.length && maze[i + 1][j] == 0) { //勞贖途中嘗試往下走的情況..
             mouseGo(i + 1, j);
