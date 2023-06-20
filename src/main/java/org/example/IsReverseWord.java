@@ -1,10 +1,13 @@
 package org.example;
 
+import org.junit.jupiter.api.Test;
+
 import java.util.*;
 
 public class IsReverseWord {
     public static String[] words = {"RADAR", "WARTER START", "MILK KLIM", "RESERVERED", "IWI"};
 
+    @Test
     public void test() {
         //宣告解答List
         ArrayList<String> ansList = new ArrayList<>();
