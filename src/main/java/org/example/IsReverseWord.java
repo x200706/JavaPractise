@@ -10,7 +10,7 @@ public class IsReverseWord {
     @Test
     public void test() {
         //宣告解答List
-        ArrayList<String> ansList = new ArrayList<>();
+        HashSet<String> ansSet = new HashSet<>();
 
         //遍歷words
         for (String word : words) {
@@ -29,14 +29,14 @@ public class IsReverseWord {
             //比對兩個方向取出元素是否相等，是的話就放進答案陣列，一旦不符合就移除
             while (ascIterator.hasNext() && descIterator.hasNext()) {
                 if (ascIterator.next().equals(descIterator.next())) {
-                    ansList.add(word);
+                    ansSet.add(word);
                 } else {
-                    ansList.remove(word);
+                    ansSet.remove(word);
                 }
             }
         }
 
         //print出答案陣列
-        System.out.println(Arrays.toString(ansList.toArray()));
+        System.out.println(Arrays.toString(ansSet.toArray()));
     }
 }
