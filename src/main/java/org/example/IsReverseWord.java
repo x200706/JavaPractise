@@ -21,12 +21,17 @@ public class IsReverseWord {
                 checkDeque.add(element);
             }
 
+            //宣告一般方向的迭代器
+            Iterator<Character> ascIterator = checkDeque.iterator();
             //宣告反向迭代器
-            Iterator<Character> iterator = checkDeque.descendingIterator();
-            //比對 從尾端取出 是否等於 先進先出，是的話就放進答案陣列
-            while (iterator.hasNext()) {
-                if (checkDeque.pop().equals(iterator.next())) {
+            Iterator<Character> descIterator = checkDeque.descendingIterator();
+
+            //比對兩個方向取出元素是否相等，是的話就放進答案陣列，一旦不符合就移除
+            while (ascIterator.hasNext() && descIterator.hasNext()) {
+                if (ascIterator.next().equals(descIterator.next())) {
                     ansList.add(word);
+                } else {
+                    ansList.remove(word);
                 }
             }
         }
