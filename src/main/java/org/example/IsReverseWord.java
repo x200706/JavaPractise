@@ -9,8 +9,8 @@ public class IsReverseWord {
 
     @Test
     public void test() {
-        //宣告解答List
-        HashSet<String> ansSet = new HashSet<>();
+        //宣告解答Set
+        HashSet<String> ansSet = new HashSet<>(); //這邊用Set內容才不會重複
 
         //遍歷words
         for (String word : words) {
