@@ -1,9 +1,6 @@
 package org.example;
 
-import java.util.ArrayDeque;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Deque;
+import java.util.*;
 
 public class IsReverseWord {
     public static String[] words = {"RADAR", "WARTER START", "MILK KLIM", "RESERVERED", "IWI"};
@@ -21,10 +18,14 @@ public class IsReverseWord {
                 checkDeque.add(element);
             }
 
-            //比對從尾端取出是否等於從頭取出，是的話就放進答案陣列
-//            if(相等){
-//                ansList.add(word);
-//            }
+            //宣告反向迭代器
+            Iterator<Character> iterator = checkDeque.descendingIterator();
+            //比對 從尾端取出 是否等於 先進先出，是的話就放進答案陣列
+            while (iterator.hasNext()) {
+                if (checkDeque.pop().equals(iterator.next())) {
+                    ansList.add(word);
+                }
+            }
         }
 
         //print出答案陣列
